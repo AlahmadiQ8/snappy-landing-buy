@@ -1,0 +1,84 @@
+/* 
+Compile this file to css/custom_L5msoKNl.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* Slide 20 (#1) */
+.brand-text-logo {
+  color: #f3fe00;
+  font-weight: bold;
+  font-style: italic;
+}
+.brand-button {
+  color: #000;
+  background-color: #f3fe00;
+}
+.white {
+  color: #fff;
+}
+
+/* Slide 46 (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-46-73c4efc5"] */
+.slide[data-cid="slide-46-73c4efc5"]{
+  @include media($phablet, max) {
+    .box-46 {
+      margin-bottom: 30px;
+    }
+  }
+  &.whiteSlide .box-46 .shadow {
+    box-shadow: none;
+  }
+}
+
+/* Slide 131 (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-131-917287b3"] */
+.slide[data-cid="slide-131-917287b3"]{
+  .header {
+    background-color: #fff;
+    padding: 7px 17px;
+    color: #000;
+  }
+  .box-131{
+    min-height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    &:after{
+      content:'';
+      position: absolute;
+      top:0;
+      right:0;
+      left:0;
+      bottom:0;
+      background: $blue;
+      opacity:0;
+      transition: .15s;
+    }
+    &:hover{
+      opacity:1;
+      &:after{
+        opacity:0.9;
+      }
+    }
+  }
+  .box-131-inner{
+    z-index:1;
+  }
+  .form-131 input[type=email]{
+    @include media($phablet, min) {
+      max-width:208px;
+    }
+    @include media($phablet, max) {
+      text-align:center;
+    }
+  }
+  
+  .brand-button {
+    background-color: #fff !important;
+    color: #000 !important; 
+  }
+}
